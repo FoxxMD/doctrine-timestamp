@@ -60,8 +60,7 @@ class Timestamp extends Type
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
-        $dt = new \DateTime();
-        $dt->setTimestamp($value);
+        $dt = new \DateTime($value);
         return $dt;
     }
 }
